@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Mision = () => {
   const classMission = 'flex flex-col justify-center items-center text-center text-xl w-[250px] h-[250px] bg-white rounded-lg shadow-lg p-6';
 

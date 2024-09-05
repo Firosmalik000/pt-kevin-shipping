@@ -1,4 +1,3 @@
-import React from 'react';
 import VisionImg from '../img/vision.jpg';
 
 const Vision = () => {

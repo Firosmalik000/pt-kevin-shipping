@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Fleet = () => {
   return (
     <div className="w-full py-16 px-8 bg-gray-50">
