@@ -77,16 +77,14 @@ const Navbar = () => {
             中文
           </button>
         </div>
-        {/* Button to toggle mobile menu */}
+
         <button className="md:hidden text-2xl" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          {isMenuOpen ? <FaTimes /> : <IoMenuSharp size={30} />} {/* Icon FaTimes for close */}
+          {isMenuOpen ? <FaTimes /> : <IoMenuSharp size={30} />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden flex flex-col gap-y-2 text-2xl bg-blue-700 text-white fixed min-h-screen text-center w-[300px] top-0 right-0 pt-[100px]">
-          {/* Close Icon */}
           <div className="absolute top-5 right-5 cursor-pointer" onClick={() => setIsMenuOpen(false)}>
             <FaTimes size={30} />
           </div>

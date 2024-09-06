@@ -5,7 +5,7 @@ import CustomerImg from '../img/customer.jpg';
 const Mision = () => {
   const { language } = useLanguage();
 
-  const classMission = 'flex flex-col justify-center items-center text-center text-xl w-[250px] h-[250px] bg-white rounded-lg shadow-lg p-6';
+  const classMission = 'flex flex-col justify-center items-center text-center text-xl w-[250px] h-[250px] bg-white  p-6';
 
   const content = {
     en: {
