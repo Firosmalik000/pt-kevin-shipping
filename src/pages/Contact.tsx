@@ -26,7 +26,7 @@ const Contact = () => {
   return (
     <section id="contact" className="w-full py-16 px-8 md:px-[100px] bg-gray-100 flex flex-col md:flex-row items-center justify-center gap-x-3">
       <div>
-        <h1 className="text-center text-4xl font-bold mb-8 text-gray-800">{content[language].title}</h1>
+        <h1 className="text-center text-4xl font-bold mb-8 text-gray-800 font-playfair">{content[language].title}</h1>
 
         <div className="max-w-lg mx-auto text-center p-8 mb-8">
           <div className={contactClass}>

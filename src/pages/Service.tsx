@@ -62,18 +62,18 @@ const Service = () => {
   };
 
   return (
-    <section id="service" className="w-full py-16 md:px-[100px] px-[60px] bg-orange-300">
+    <section id="service" className="w-full py-16 md:px-[100px] px-[60px] bg-orange-400">
       {/* Language Selector */}
 
-      <h1 className="text-center text-4xl font-bold mb-8 text-gray-800">{language === 'en' ? 'Our Services' : '我们的服务'}</h1>
-      <p className="text-center text-xl text-gray-700 mb-12">{language === 'en' ? 'We offer a range of services, including:' : '我们提供一系列服务，包括：'}</p>
+      <h1 className="text-center text-4xl text-white font-bold mb-8  font-playfair">{language === 'en' ? 'Our Services' : '我们的服务'}</h1>
+      <p className="text-center text-xl text-white mb-12">{language === 'en' ? 'We offer a range of services, including:' : '我们提供一系列服务，包括：'}</p>
 
       {/* Service Highlights */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {companyHighlights[language].map((highlight, index) => (
           <div key={index} className="bg-white shadow-lg rounded-lg p-6 text-center hover:scale-110 transition duration-300">
             <div className="flex justify-center mb-4">{highlight.icon}</div>
-            <h2 className="text-2xl font-semibold text-gray-800 mb-2">{highlight.title}</h2>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-2 font-playfair">{highlight.title}</h2>
             <p className="text-gray-600">{highlight.description}</p>
           </div>
         ))}

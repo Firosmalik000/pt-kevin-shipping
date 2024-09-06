@@ -19,7 +19,7 @@ const Vision = () => {
     <section id="vision" className="w-full h-[500px] bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${VisionImg})` }}>
       <div className="w-full h-[500px] py-16 px-8 md:bg-gradient-to-r bg-gradient-to-b from-black to-none flex items-center justify-center">
         <div className="">
-          <h1 className="text-center text-4xl font-bold text-white mb-8">{content[language].title}</h1>
+          <h1 className="text-center text-4xl font-bold text-white mb-8 font-playfair">{content[language].title}</h1>
           <p className="text-center text-xl text-white max-w-3xl mx-auto">{content[language].description}</p>
         </div>
       </div>

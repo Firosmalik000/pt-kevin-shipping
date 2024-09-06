@@ -3,7 +3,6 @@ import TugboatImg from '../img/tugboat.jpg';
 import BargesImg from '../img/barges.jpeg';
 import { useLanguage } from '../hooks/UseLanguage';
 
-
 const Fleet = () => {
   const [activeTab, setActiveTab] = useState<'tugboats' | 'barges'>('tugboats');
   const { language } = useLanguage();
@@ -32,7 +31,7 @@ const Fleet = () => {
 
   return (
     <section id="fleet" className="w-full py-16 bg-gray-50 px-[50px] md:px-[100px]">
-      <h1 className="text-center text-4xl font-bold mb-3 text-gray-800">{content[language].fleetTitle}</h1>
+      <h1 className="text-center text-4xl font-bold mb-3 text-gray-800 font-playfair">{content[language].fleetTitle}</h1>
       <p className="text-center mb-8 max-w-3xl mx-auto">{content[language].description}</p>
 
       <div className="flex justify-center mb-8">
@@ -55,8 +54,8 @@ const Fleet = () => {
         {activeTab === 'tugboats' && (
           <>
             <div className="mb-8 md:mb-0">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">{content[language].tugboatsTitle}</h2>
-              <ul className="list-disc list-inside text-left text-gray-700 space-y-2">
+              <h2 className="text-2xl font-semibold md:text-left text-center text-gray-800 mb-4">{content[language].tugboatsTitle}</h2>
+              <ul className="list-disc list-inside md:text-left text-center text-gray-700 space-y-2">
                 {content[language].tugboats.map((tugboat, index) => (
                   <li key={index}>{tugboat}</li>
                 ))}
@@ -70,12 +69,12 @@ const Fleet = () => {
 
         {activeTab === 'barges' && (
           <>
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 mb-2">
               <img className="w-full h-auto rounded-xl shadow-lg" src={BargesImg} alt="Barges" />
             </div>
             <div className="mb-8 md:mb-0">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">{content[language].bargesTitle}</h2>
-              <ul className="list-disc list-inside text-left text-gray-700 space-y-2">
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4  md:text-left text-center">{content[language].bargesTitle}</h2>
+              <ul className="list-disc list-inside  md:text-left text-center text-gray-700 space-y-2">
                 {content[language].barges.map((barge, index) => (
                   <li key={index}>{barge}</li>
                 ))}
@@ -87,7 +86,7 @@ const Fleet = () => {
 
       <p className="text-lg text-gray-700 text-center mt-8">
         {content[language].contactText}{' '}
-        <a href="mailto:Kevinshipping89@gmail.com" className="text-blue-600 underline">
+        <a href="https://wa.me/+6281293598873" className="text-blue-600 underline">
           contact us
         </a>
         .
