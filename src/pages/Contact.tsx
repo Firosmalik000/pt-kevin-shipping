@@ -1,6 +1,24 @@
 import { FaPhone, FaFax, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { useLanguage } from '../hooks/LanguageProvider';
 
 const Contact = () => {
+  const { language } = useLanguage();
+
+  const content = {
+    en: {
+      address: 'PT Kevin Shipping, Jl. Taman Sari 4 No.7a, RT 001, RW 003, Maphar, Kec. Taman Sari, Jakarta Barat',
+      phone: 'Phone:',
+      fax: 'Fax:',
+      email: 'Email:',
+    },
+    zh: {
+      address: '凯文航运公司，Jl. Taman Sari 4 No.7a, RT 001, RW 003, Maphar, Kec. Taman Sari, 西雅加达',
+      phone: '电话:',
+      fax: '传真:',
+      email: '电子邮件:',
+    },
+  };
+
   return (
     <div className="w-full py-16 px-[100px] bg-gray-50 flex items-center justify-center gap-x-3">
       <div>
@@ -8,20 +26,20 @@ const Contact = () => {
 
         <div className="max-w-lg mx-auto text-center  p-8 mb-8">
           <p className="text-lg text-gray-700 flex items-center justify-center mb-4">
-            <FaMapMarkerAlt className="text-red-500 mr-2" />
-            PT Kevin Shipping, Jl. Taman Sari 4 No.7a, RT 001, RW 003, Maphar, Kec. Taman Sari, Jakarta Barat
+            <FaMapMarkerAlt className="text-red-500 mr-2 text-2xl" />
+            {content[language].address}
           </p>
           <p className="text-lg text-gray-700 flex items-center justify-center mb-4">
             <FaPhone className="text-green-500 mr-2" />
-            <span className="font-semibold">Telepon:</span> (021) 6262571
+            <span className="font-semibold">{content[language].phone}</span> (021) 6262571
           </p>
           <p className="text-lg text-gray-700 flex items-center justify-center mb-4">
             <FaFax className="text-blue-500 mr-2" />
-            <span className="font-semibold">Fax:</span> (021) 6262573
+            <span className="font-semibold">{content[language].fax}</span> (021) 6262573
           </p>
           <p className="text-lg text-gray-700 flex items-center justify-center">
             <FaEnvelope className="text-yellow-500 mr-2" />
-            <span className="font-semibold">Email:</span>{' '}
+            <span className="font-semibold">{content[language].email}</span>{' '}
             <a href="mailto:Kevinshipping89@gmail.com" className="text-blue-600 underline">
               Kevinshipping89@gmail.com
             </a>
