@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import LogoImage from '../img/logo.png';
-import { useLanguage } from '../hooks/LanguageProvider';
+import { useLanguage } from '../hooks/UseLanguage';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,11 +41,11 @@ const Navbar = () => {
   };
 
   return (
-    <div className={`fixed top-0 z-[100] h-[70px] w-full px-10 transition-colors duration-300 ${isScrolled ? 'bg-white shadow-xl text-black' : 'bg-blue-800 text-white'}`}>
+    <div className={`fixed top-0 z-[100] h-[90px] w-full px-10 transition-colors duration-300 ${isScrolled ? 'bg-white shadow-xl text-black' : 'bg-blue-800 text-white'}`}>
       <div className="h-full flex items-center justify-between">
         <div className="flex gap-2">
           <img src={LogoImage} className="w-10" alt="Logo" />
-          <p className="text-3xl">Kevin Shipping</p>
+          <p className="text-3xl font-bold py-2">Kevin Shipping</p>
         </div>
         <div className="flex gap-x-4">
           <div>{texts[language].aboutUs}</div>

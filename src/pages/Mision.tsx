@@ -1,4 +1,6 @@
-import { useLanguage } from '../hooks/LanguageProvider';
+import { useLanguage } from '../hooks/UseLanguage';
+import ClientImage from '../img/client.jpg';
+import CustomerImg from '../img/customer.jpg';
 
 const Mision = () => {
   const { language } = useLanguage();
@@ -20,14 +22,20 @@ const Mision = () => {
   };
 
   return (
-    <div className="w-full bg-orange-500 py-16 px-8">
-      <h1 className="text-center text-4xl font-bold text-white mb-12">{content[language].title}</h1>
-      <div className="flex gap-x-16 items-center justify-center">
-        <div className={`${classMission} bg-red-400`}>
-          <p>{content[language].descriptions[0]}</p>
+    <div className="w-full py-16 px-8 bg-gray-100">
+      <h1 className="text-center text-4xl font-bold mb-12">{content[language].title}</h1>
+      <div className="flex flex-col md:flex-row gap-16 items-center justify-center">
+        <div className="flex flex-col gap-4 w-full md:w-[600px]">
+          <img src={ClientImage} alt="Client" className="w-full h-auto object-cover rounded-lg shadow-lg" />
+          <img src={CustomerImg} alt="Customer" className="w-full h-auto object-cover rounded-lg shadow-lg" />
         </div>
-        <div className={`${classMission} bg-blue-400`}>
-          <p>{content[language].descriptions[1]}</p>
+        <div className="flex flex-col gap-4">
+          <div className={`${classMission} bg-red-400`}>
+            <p>{content[language].descriptions[0]}</p>
+          </div>
+          <div className={`${classMission} bg-blue-400`}>
+            <p>{content[language].descriptions[1]}</p>
+          </div>
         </div>
       </div>
     </div>

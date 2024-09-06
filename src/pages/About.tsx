@@ -1,5 +1,5 @@
+import { useLanguage } from '../hooks/UseLanguage';
 import AboutImage from '../img/about.jpg';
-import { useLanguage } from '../hooks/LanguageProvider';
 
 const About = () => {
   const { language } = useLanguage();
@@ -16,7 +16,7 @@ const About = () => {
   };
 
   return (
-    <div className="w-full bg-blue-600 p-8 px-[100px]">
+    <div className="w-full bg-blue-600 py-8 md:px-[100px] px-[60ox]">
       <div className="flex flex-col md:flex-row items-center gap-x-3">
         <div className="w-full border-white p-8">
           <h1 className="text-white text-3xl font-bold mb-6 text-center">{content[language].title}</h1>

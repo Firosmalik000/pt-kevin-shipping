@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import TugboatImg from '../img/tugboat.jpg';
 import BargesImg from '../img/barges.jpeg';
-import { useLanguage } from '../hooks/LanguageProvider';
+import { useLanguage } from '../hooks/UseLanguage';
+
 
 const Fleet = () => {
   const [activeTab, setActiveTab] = useState<'tugboats' | 'barges'>('tugboats');

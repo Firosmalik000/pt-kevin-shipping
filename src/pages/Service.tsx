@@ -1,5 +1,6 @@
 import { FaAnchor, FaTachometerAlt, FaDollarSign, FaUsers, FaCog } from 'react-icons/fa';
-import { useLanguage } from '../hooks/LanguageProvider';
+import { useLanguage } from '../hooks/UseLanguage';
+
 
 const Service = () => {
   const { language } = useLanguage();
@@ -62,7 +63,7 @@ const Service = () => {
   };
 
   return (
-    <div className="w-full py-16 px-[100px] bg-gray-100">
+    <div className="w-full py-16 md:px-[100px] px-[60px] bg-orange-300">
       {/* Language Selector */}
 
       <h1 className="text-center text-4xl font-bold mb-8 text-gray-800">{language === 'en' ? 'Our Services' : '我们的服务'}</h1>
@@ -71,7 +72,7 @@ const Service = () => {
       {/* Service Highlights */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {companyHighlights[language].map((highlight, index) => (
-          <div key={index} className="bg-white shadow-lg rounded-lg p-6 text-center">
+          <div key={index} className="bg-white shadow-lg rounded-lg p-6 text-center hover:scale-110 transition duration-300">
             <div className="flex justify-center mb-4">{highlight.icon}</div>
             <h2 className="text-2xl font-semibold text-gray-800 mb-2">{highlight.title}</h2>
             <p className="text-gray-600">{highlight.description}</p>

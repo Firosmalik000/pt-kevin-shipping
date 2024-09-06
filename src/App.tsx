@@ -1,12 +1,7 @@
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Fleet from './pages/Fleet';
-import Hero from './pages/Hero';
-import Mision from './pages/Mision';
-import Service from './pages/Service';
-import Vision from './pages/Vision';
+import { About, Contact, Fleet, Hero, Mision, Service, Vision } from './pages';
+import { FaWhatsapp } from 'react-icons/fa';
 
 function App() {
   return (
@@ -20,6 +15,9 @@ function App() {
       <Fleet />
       <Contact />
       <Footer />
+      <a href="https://wa.me/+6281293598873" className="fixed bottom-5 w-[50px] h-[50px]  right-5 rounded-full bg-green-500 flex items-center justify-center ">
+        <FaWhatsapp className="w-10 h-10 text-white" />
+      </a>
     </div>
   );
 }
