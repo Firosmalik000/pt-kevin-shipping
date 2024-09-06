@@ -22,7 +22,7 @@ const Mision = () => {
   };
 
   return (
-    <div className="w-full py-16 px-8 bg-gray-100">
+    <section id="mision" className="w-full py-16 px-8 bg-gray-100">
       <h1 className="text-center text-4xl font-bold mb-12">{content[language].title}</h1>
       <div className="flex flex-col md:flex-row gap-16 items-center justify-center">
         <div className="flex flex-col gap-4 w-full md:w-[600px]">
@@ -38,7 +38,7 @@ const Mision = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -16,7 +16,7 @@ const About = () => {
   };
 
   return (
-    <div className="w-full bg-blue-600 py-8 md:px-[100px] px-[60ox]">
+    <section id="about" className="w-full bg-blue-600 py-8 md:px-[100px] px-[60ox]">
       <div className="flex flex-col md:flex-row items-center gap-x-3">
         <div className="w-full border-white p-8">
           <h1 className="text-white text-3xl font-bold mb-6 text-center">{content[language].title}</h1>
@@ -24,7 +24,7 @@ const About = () => {
         </div>
         <img src={AboutImage} alt="About PT Kevin Shipping" className="md:w-1/2 w-full object-cover rounded-lg shadow-lg" />
       </div>
-    </div>
+    </section>
   );
 };
 

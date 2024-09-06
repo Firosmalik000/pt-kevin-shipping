@@ -1,7 +1,6 @@
 import { FaAnchor, FaTachometerAlt, FaDollarSign, FaUsers, FaCog } from 'react-icons/fa';
 import { useLanguage } from '../hooks/UseLanguage';
 
-
 const Service = () => {
   const { language } = useLanguage();
 
@@ -63,7 +62,7 @@ const Service = () => {
   };
 
   return (
-    <div className="w-full py-16 md:px-[100px] px-[60px] bg-orange-300">
+    <section id="service" className="w-full py-16 md:px-[100px] px-[60px] bg-orange-300">
       {/* Language Selector */}
 
       <h1 className="text-center text-4xl font-bold mb-8 text-gray-800">{language === 'en' ? 'Our Services' : '我们的服务'}</h1>
@@ -79,7 +78,7 @@ const Service = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

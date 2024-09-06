@@ -31,7 +31,7 @@ const Fleet = () => {
   };
 
   return (
-    <div className="w-full py-16 bg-gray-50 px-[50px] md:px-[100px]">
+    <section id="fleet" className="w-full py-16 bg-gray-50 px-[50px] md:px-[100px]">
       <h1 className="text-center text-4xl font-bold mb-3 text-gray-800">{content[language].fleetTitle}</h1>
       <p className="text-center mb-8 max-w-3xl mx-auto">{content[language].description}</p>
 
@@ -92,7 +92,7 @@ const Fleet = () => {
         </a>
         .
       </p>
-    </div>
+    </section>
   );
 };
 

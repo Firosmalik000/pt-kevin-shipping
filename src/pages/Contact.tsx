@@ -1,7 +1,6 @@
 import { FaPhone, FaFax, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import { useLanguage } from '../hooks/UseLanguage';
 
-
 const Contact = () => {
   const { language } = useLanguage();
 
@@ -25,7 +24,7 @@ const Contact = () => {
   const contactClass = 'text-lg text-gray-700 mb-4';
 
   return (
-    <div className="w-full py-16 px-8 md:px-[100px] bg-gray-100 flex flex-col md:flex-row items-center justify-center gap-x-3">
+    <section id="contact" className="w-full py-16 px-8 md:px-[100px] bg-gray-100 flex flex-col md:flex-row items-center justify-center gap-x-3">
       <div>
         <h1 className="text-center text-4xl font-bold mb-8 text-gray-800">{content[language].title}</h1>
 
@@ -74,7 +73,7 @@ const Contact = () => {
           allowFullScreen
         ></iframe>
       </div>
-    </div>
+    </section>
   );
 };
 
