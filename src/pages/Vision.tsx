@@ -1,5 +1,5 @@
 import { useLanguage } from '../hooks/UseLanguage';
-import VisionImg from '../img/vision.jpg';
+import VisionImg from '../img/visi.jpeg';
 
 const Vision = () => {
   const { language } = useLanguage();
@@ -16,11 +16,11 @@ const Vision = () => {
   };
 
   return (
-    <section id="vision" className="w-full h-[500px] bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${VisionImg})` }}>
-      <div className="w-full h-[500px] py-16 px-8 md:bg-gradient-to-r bg-gradient-to-b from-black to-none flex items-center justify-center">
-        <div className="">
-          <h1 className="text-center text-4xl font-bold text-white mb-8 font-playfair">{content[language].title}</h1>
-          <p className="text-center text-xl text-white max-w-3xl mx-auto">{content[language].description}</p>
+    <section id="vision" className="w-full h-[550px] bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${VisionImg})` }}>
+      <div className="w-full h-full py-16 px-8 bg-gradient-to-b md:bg-gradient-to-r from-black/100 via-black/50 to-transparent  flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8 font-playfair">{content[language].title}</h1>
+          <p className="text-xl text-white max-w-3xl mx-auto">{content[language].description}</p>
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 import { useLanguage } from '../hooks/UseLanguage';
-import AboutImage from '../img/about.jpg';
+import AboutImage from '../img/profile.jpeg';
 
 const About = () => {
   const { language } = useLanguage();
@@ -16,13 +16,13 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="w-full bg-blue-600 py-8 md:px-[100px] px-[60ox] ">
-      <div className="flex flex-col md:flex-row lg:flex-row items-center gap-x-3">
-        <div className="w-full border-white p-8">
-          <h1 className="text-white text-3xl font-bold mb-6 text-center font-playfair">{content[language].title}</h1>
-          <p className="text-white mb-4 indent-8">{content[language].description}</p>
+    <section id="about" className="w-full bg-blue-600 py-16 md:px-[200px] px-[60px] ">
+      <div className="flex flex-col md:flex-row lg:flex-row items-center justify-center gap-x-3">
+        <div className="w-[450px] border-white p-8">
+          <h1 className="text-white text-4xl font-bold mb-6 text-center font-playfair">{content[language].title}</h1>
+          <p className="text-white mb-4 indent-8 text-xl text-justify">{content[language].description}</p>
         </div>
-        <img src={AboutImage} alt="About PT Kevin Shipping" className="md:w-1/2 w-full object-cover rounded-lg shadow-lg" />
+        <img src={AboutImage} alt="About PT Kevin Shipping" className="md:w-[550px] w-[500px] md:h-[550px] h-auto object-cover rounded-xl shadow-lg" />
       </div>
     </section>
   );

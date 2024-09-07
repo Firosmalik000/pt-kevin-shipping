@@ -1,96 +1,44 @@
-import { useState } from 'react';
-import TugboatImg from '../img/tugboat.jpg';
-import BargesImg from '../img/barges.jpeg';
+import one from '../img/1.jpeg';
+import three from '../img/3.jpeg';
+import four from '../img/4.jpeg';
+import five from '../img/5.jpeg';
+import six from '../img/6.jpeg';
+import seven from '../img/7.jpeg';
+import eight from '../img/8.jpeg';
+import nine from '../img/9.jpeg';
+import eleven from '../img/11.jpeg';
 import { useLanguage } from '../hooks/UseLanguage';
 
 const Fleet = () => {
-  const [activeTab, setActiveTab] = useState<'tugboats' | 'barges'>('tugboats');
   const { language } = useLanguage();
 
   const content = {
     en: {
-      fleetTitle: 'Our Fleet',
-      description:
-        'PT Kevin Shipping boasts a modern and well-maintained fleet of barges and tugboats. Our vessels are equipped with the latest technology and safety features to ensure efficient and reliable operations. Here is a glimpse of our fleet:',
-      tugboatsTitle: 'Tugboats',
-      bargesTitle: 'Barges',
-      tugboats: ['TB.PRIMA RAJAWALI 777', 'TB.PRIMA RAJAWALI 888', 'TB.ADHI 1', 'TB.ADHI 2', 'TB.ADHI 3'],
-      barges: ['BG.MANDIRI ANGGREK', 'BG.MANDIRI AZALEA', 'BG.INTERNUSA 1', 'BG.INTERNUSA 2', 'BG.INTERNUSA 3'],
-      contactText: 'For detailed specifications of each vessel, please contact us.',
+      fleetTitle: 'Our Gallery',
     },
     zh: {
-      fleetTitle: '我们的船队',
-      description: 'PT Kevin Shipping 拥有一支现代化且维护良好的驳船和拖船船队。我们的船只配备了最新的技术和安全功能，以确保高效和可靠的运营。以下是我们船队的一瞥：',
-      tugboatsTitle: '拖船',
-      bargesTitle: '驳船',
-      tugboats: ['TB.PRIMA RAJAWALI 777', 'TB.PRIMA RAJAWALI 888', 'TB.ADHI 1', 'TB.ADHI 2', 'TB.ADHI 3'],
-      barges: ['BG.MANDIRI ANGGREK', 'BG.MANDIRI AZALEA', 'BG.INTERNUSA 1', 'BG.INTERNUSA 2', 'BG.INTERNUSA 3'],
-      contactText: '有关每艘船的详细规格，请联系我们。',
+      fleetTitle: '我们的画廊',
     },
   };
 
+  const classImg = 'w-full h-[300px] object-cover rounded-lg shadow-lg transition-transform transform hover:scale-105 duration-300';
+
   return (
-    <section id="fleet" className="w-full py-16 bg-gray-50 px-[50px] md:px-[100px]">
-      <h1 className="text-center text-4xl font-bold mb-3 text-gray-800 font-playfair">{content[language].fleetTitle}</h1>
-      <p className="text-center mb-8 max-w-3xl mx-auto">{content[language].description}</p>
-
-      <div className="flex justify-center mb-8">
-        <button
-          className={`px-6 py-2 mr-4 font-semibold rounded-lg transition-all duration-300 ${activeTab === 'tugboats' ? 'text-white bg-blue-600 shadow-md' : 'text-gray-800 bg-gray-200 hover:bg-gray-300'}`}
-          onClick={() => setActiveTab('tugboats')}
-        >
-          {content[language].tugboatsTitle}
-        </button>
-        <button
-          className={`px-6 py-2 font-semibold rounded-lg transition-all duration-300 ${activeTab === 'barges' ? 'text-white bg-blue-600 shadow-md' : 'text-gray-800 bg-gray-200 hover:bg-gray-300'}`}
-          onClick={() => setActiveTab('barges')}
-        >
-          {content[language].bargesTitle}
-        </button>
+    <section id="fleet" className="w-full py-16 bg-gray-50 px-6 md:px-[100px]">
+      <div className="text-center mb-12">
+        <h1 className="text-4xl font-bold text-gray-800 font-playfair">{content[language].fleetTitle}</h1>
       </div>
-
-      {/* Content based on active tab */}
-      <div className="flex w-[60%] flex-col md:flex-row gap-x-6 items-center justify-center mx-auto">
-        {activeTab === 'tugboats' && (
-          <>
-            <div className="mb-8 md:mb-0">
-              <h2 className="text-2xl font-semibold md:text-left text-center text-gray-800 mb-4">{content[language].tugboatsTitle}</h2>
-              <ul className="list-disc list-inside md:text-left text-center text-gray-700 space-y-2">
-                {content[language].tugboats.map((tugboat, index) => (
-                  <li key={index}>{tugboat}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="md:w-1/2">
-              <img className="w-full h-auto rounded-xl shadow-lg" src={TugboatImg} alt="Tugboat" />
-            </div>
-          </>
-        )}
-
-        {activeTab === 'barges' && (
-          <>
-            <div className="md:w-1/2 mb-2">
-              <img className="w-full h-auto rounded-xl shadow-lg" src={BargesImg} alt="Barges" />
-            </div>
-            <div className="mb-8 md:mb-0">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4  md:text-left text-center">{content[language].bargesTitle}</h2>
-              <ul className="list-disc list-inside  md:text-left text-center text-gray-700 space-y-2">
-                {content[language].barges.map((barge, index) => (
-                  <li key={index}>{barge}</li>
-                ))}
-              </ul>
-            </div>
-          </>
-        )}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <img src={one} alt="Fleet 1" className={classImg} />
+        <img src={eleven} alt="Fleet 2" className={classImg} />
+        <img src={three} alt="Fleet 3" className={classImg} />
+        <img src={four} alt="Fleet 4" className={classImg} />
+        <img src={six} alt="Fleet 5" className={classImg} />
+        <img src={five} alt="Fleet 6" className={classImg} />
+        <img src={seven} alt="Fleet 7" className={classImg} />
+        <img src={eight} alt="Fleet 8" className={classImg} />
+        <img src={nine} alt="Fleet 9" className={classImg} />
       </div>
-
-      <p className="text-lg text-gray-700 text-center mt-8">
-        {content[language].contactText}{' '}
-        <a href="https://wa.me/+6281293598873" className="text-blue-600 underline">
-          contact us
-        </a>
-        .
-      </p>
     </section>
   );
 };
