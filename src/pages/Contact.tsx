@@ -41,14 +41,14 @@ const Contact = () => {
               <FaPhone className="text-green-500 mr-2" />
               <span className="font-semibold">{content[language].phone}</span>
             </div>
-            (021) 6262571
+            +6281-2935-98873
           </p>
           <p className={contactClass}>
             <div className="flex items-center justify-center">
               <FaFax className="text-blue-500 mr-2" />
               <span className="font-semibold">{content[language].fax}</span>
             </div>
-            (021) 6262573
+            (021) 6262571
           </p>
           <p className={contactClass}>
             <div className="flex items-center justify-center">
