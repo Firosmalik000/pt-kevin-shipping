@@ -7,6 +7,10 @@ import seven from '../img/7.jpeg';
 import eight from '../img/8.jpeg';
 import nine from '../img/9.jpeg';
 import eleven from '../img/11.jpeg';
+import R1 from '../img/r1.jpg';
+import R2 from '../img/r2.jpg';
+import R3 from '../img/r3.jpg';
+
 import { useLanguage } from '../hooks/UseLanguage';
 
 const Fleet = () => {
@@ -38,6 +42,9 @@ const Fleet = () => {
         <img src={seven} alt="Fleet 7" className={classImg} />
         <img src={eight} alt="Fleet 8" className={classImg} />
         <img src={nine} alt="Fleet 9" className={classImg} />
+        <img src={R1} alt="Fleet 9" className={classImg} />
+        <img src={R2} alt="Fleet 9" className={classImg} />
+        <img src={R3} alt="Fleet 9" className={classImg} />
       </div>
     </section>
   );
